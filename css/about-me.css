@@ -1,21 +1,18 @@
 body {
     max-width: 100%;
     display: grid;
-    grid-template-rows: 150px repeat(4, 1fr) 120px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-flow: row;
-    margin: 0 2px;
+    grid-template-rows: 150px 1fr 120px;
+    grid-template-columns: 1fr 980px 1fr;
     position: relative;
     min-height: 100%;
-    align-items: stretch;
-    min-height: 100%;
+    margin: 0 2px;
 }
 
 header {
-    grid-area: 1 / 1 / 2 / span 4;
     background-color: #f7f7f7;
     margin-bottom: 2px;
     text-align: center;
+    grid-area: 1 / 1 / 2 / 4;
 }
 
 h1 {
@@ -58,20 +55,27 @@ li {
     padding: 0;
 }
 
-.photo {
+main {
     max-width: 100%;
-    grid-area: 2 / 1 / span 4 / span 4;
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
 }
 
-.photo img {
-    width: 333px;
-    height: 333px;
-    position: relative;
+img {
+    grid-area: 1 / 2 / 2 / 3;
+    opacity: 0.7;
 }
 
-.icons {
-    position: absolute;
-    visibility: hidden;
+.about-me {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+footer {
+    grid-area: 3 / 1 / 4 / 4;
+    opacity: 0.5;
+    background-color: #f9fcfc;
+    position: sticky;
+    bottom: 0;
 }
 
 .social {
@@ -79,14 +83,6 @@ li {
     justify-content: center;
     margin: 15px 0;
     padding: 0;
-}
-
-footer {
-    grid-area: 6 / 1 / 7 / span 4;
-    opacity: 0.5; 
-    background-color: #f9fcfc ;
-    position: sticky;
-    bottom: 0;
 }
 
 .social li {
