@@ -1,4 +1,5 @@
 body {
+    max-width: 1900px;
     display: grid;
     grid-template-rows: 150px 1fr 100px;
     grid-template-areas: "header header header" ". main ." "footer footer footer";
@@ -72,33 +73,55 @@ main {
     max-width: 550px;
 }
 
-.contact-form {
-    grid-area: contact-form;
-    max-width: 550px;
+.about-me p {
+    text-align: justify;
     font-family: 'Jura', sans-serif;
     font-size: 15px;
-}
-
-form {
-    max-width: 550px;
     margin: 10px;
 }
 
-button,
-textarea,
-input {
+.contact-form {
+    grid-area: contact-form;
     font-family: 'Jura', sans-serif;
     font-size: 15px;
-    min-width: 520px;
+    margin: 10px;
+    max-width: 550px;
+
+}
+
+#form-msg {
+    padding-top: 30px;
+    max-width: 100%;
+}
+
+button,
+input {
+    grid-area: contact-form;
+    font-family: 'Jura', sans-serif;
+    min-height: 36px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    grid-area: contact-form;
+    font-family: 'Jura', sans-serif;
+    min-height: 150px;
+    width: 100%;
+    padding: 1px;
+    box-sizing: border-box;
 }
 
 button {
     color: #FFFFFF;
-    background-color: black; 
-    border-color: black; 
+    background-color: black;
+    font-size: 15px;
+    border: none;
     opacity: 0.8;
     padding: 0;
     margin: 0;
+    min-height: 45px;
+    width: 100%;
 }
 
 h2 {
@@ -106,13 +129,6 @@ h2 {
     font-weight: lighter;
     font-size: 40px;
     margin: 30px 0 20px 0;
-}
-
-.about-me p {
-    text-align: justify;
-    font-family: 'Jura', sans-serif;
-    font-size: 15px;
-    margin: 10px;
 }
 
 footer {
